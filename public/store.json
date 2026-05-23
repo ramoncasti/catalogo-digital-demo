@@ -1,0 +1,99 @@
+{
+  "store": {
+    "id": "lapastefit",
+    "slug": "lapastefit",
+    "name": "La Pasta Fit",
+    "logoText": "LF",
+    "logoUrl": "",
+    "headline": "Tu catalogo digital para vender por WhatsApp",
+    "tagline": "Tu logo, tus colores y tu catalogo actualizado por vos mismo.",
+    "description": "Mostrá tus productos, dejá que tus clientes armen el pedido y recibilo directo por WhatsApp sin depender de terceros.",
+    "whatsapp": "595981000000",
+    "currency": "PYG",
+    "locale": "es-PY",
+    "theme": {
+      "primaryColor": "#ff7a45",
+      "accentColor": "#15313d",
+      "backgroundColor": "#fcfaf6"
+    }
+  },
+  "categories": [
+    {
+      "id": "pastas",
+      "slug": "pastas",
+      "name": "Pastas",
+      "order": 1,
+      "active": true
+    },
+    {
+      "id": "combos",
+      "slug": "combos",
+      "name": "Combos",
+      "order": 2,
+      "active": true
+    },
+    {
+      "id": "salsas",
+      "slug": "salsas",
+      "name": "Salsas",
+      "order": 3,
+      "active": true
+    }
+  ],
+  "products": [
+    {
+      "id": "prod_001",
+      "slug": "ravioles-caseros",
+      "name": "Ravioles Caseros",
+      "description": "Rellenos suaves, listos para cocinar y vender con una foto potente.",
+      "price": 25000,
+      "compareAtPrice": 30000,
+      "currency": "PYG",
+      "imageUrl": "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&w=1200&q=80",
+      "gallery": [],
+      "categoryId": "pastas",
+      "sku": "RAV-001",
+      "stock": 12,
+      "active": true,
+      "featured": true,
+      "tags": ["casero", "saludable"],
+      "order": 1
+    },
+    {
+      "id": "prod_002",
+      "slug": "combo-saludable",
+      "name": "Combo Saludable",
+      "description": "Ideal para destacar promos semanales o productos estrella.",
+      "price": 38000,
+      "compareAtPrice": 0,
+      "currency": "PYG",
+      "imageUrl": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1200&q=80",
+      "gallery": [],
+      "categoryId": "combos",
+      "sku": "COM-001",
+      "stock": 8,
+      "active": true,
+      "featured": true,
+      "tags": ["promo"],
+      "order": 2
+    },
+    {
+      "id": "prod_003",
+      "slug": "salsa-artesanal",
+      "name": "Salsa Artesanal",
+      "description": "Cada item puede llevar descripcion, precio, foto y categoria.",
+      "price": 18000,
+      "compareAtPrice": 0,
+      "currency": "PYG",
+      "imageUrl": "https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=1200&q=80",
+      "gallery": [],
+      "categoryId": "salsas",
+      "sku": "SAL-001",
+      "stock": 20,
+      "active": true,
+      "featured": false,
+      "tags": [],
+      "order": 3
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+:root {
+  --brand-primary: #ff7a45;
+  --brand-accent: #15313d;
+}
+
+body {
+  font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+#root {
+  min-height: 100vh;
+}
+
+.input {
+  @apply w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-slate-900 outline-none transition focus:border-slate-400;
+}
+
+.color-input {
+  @apply h-12 w-full rounded-2xl border border-slate-200 bg-white p-2;
+}

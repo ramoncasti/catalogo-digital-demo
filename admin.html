@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CMS - Catalogo Digital</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="admin">
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+
+  <header class="topbar container">
+    <a class="brand" href="index.html">
+      <div class="brand-mark" id="adminBrandMark">C</div>
+      <div>
+        <p class="eyebrow">Panel de administracion</p>
+        <h1 id="adminBrandName">Catalogo Digital</h1>
+      </div>
+    </a>
+    <nav class="topbar-actions">
+      <a class="ghost-btn" href="index.html">Ver tienda</a>
+      <button class="primary-btn" id="saveAllButton" type="button">Guardar cambios</button>
+    </nav>
+  </header>
+
+  <main class="container admin-layout">
+    <section class="admin-panel">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Configuracion general</p>
+          <h2>Tu marca y contacto</h2>
+        </div>
+      </div>
+
+      <form id="brandForm" class="admin-form">
+        <label>
+          Nombre del negocio
+          <input type="text" name="name" placeholder="Ej: La Pasta Fit">
+        </label>
+        <label>
+          Texto del logo
+          <input type="text" name="logoText" maxlength="2" placeholder="LF">
+        </label>
+        <label>
+          WhatsApp
+          <input type="text" name="whatsapp" placeholder="595981000000">
+        </label>
+        <label>
+          Titulo principal
+          <input type="text" name="headline" placeholder="Vendé con tu catalogo online">
+        </label>
+        <label>
+          Mensaje corto
+          <textarea name="tagline" rows="3" placeholder="Texto corto de bienvenida"></textarea>
+        </label>
+        <label>
+          Descripcion
+          <textarea name="description" rows="4" placeholder="Explicá tu propuesta"></textarea>
+        </label>
+        <label>
+          Color primario
+          <input type="color" name="primaryColor">
+        </label>
+        <label>
+          Color acento
+          <input type="color" name="accentColor">
+        </label>
+      </form>
+    </section>
+
+    <section class="admin-panel">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Productos</p>
+          <h2>Cargá y editá tu catalogo</h2>
+        </div>
+        <button class="primary-btn" id="newProductButton" type="button">Nuevo producto</button>
+      </div>
+
+      <div class="toolbar">
+        <button class="ghost-btn" id="exportButton" type="button">Exportar JSON</button>
+        <label class="ghost-btn file-upload">
+          Importar JSON
+          <input type="file" id="importInput" accept="application/json">
+        </label>
+        <button class="ghost-btn danger" id="resetButton" type="button">Restaurar demo</button>
+      </div>
+
+      <div class="product-editor-list" id="productEditorList"></div>
+    </section>
+  </main>
+
+  <template id="productEditorTemplate">
+    <article class="editor-card">
+      <div class="editor-card-header">
+        <div>
+          <p class="eyebrow">Producto</p>
+          <h3 class="editor-product-title">Nuevo producto</h3>
+        </div>
+        <button class="link-btn danger remove-editor-product" type="button">Eliminar</button>
+      </div>
+      <div class="editor-grid">
+        <label>
+          Nombre
+          <input type="text" name="name" placeholder="Nombre del producto">
+        </label>
+        <label>
+          Categoria
+          <input type="text" name="category" placeholder="Pastas, Combos, etc.">
+        </label>
+        <label>
+          Precio
+          <input type="number" name="price" min="0" step="0.01" placeholder="0">
+        </label>
+        <label>
+          Activo
+          <select name="active">
+            <option value="true">Si</option>
+            <option value="false">No</option>
+          </select>
+        </label>
+        <label class="editor-grid-span">
+          Descripcion
+          <textarea name="description" rows="3" placeholder="Descripcion del producto"></textarea>
+        </label>
+        <label class="editor-grid-span">
+          URL de imagen
+          <input type="url" name="image" placeholder="https://...">
+        </label>
+        <label class="editor-grid-span">
+          O subir imagen
+          <input type="file" name="imageFile" accept="image/*">
+        </label>
+      </div>
+      <div class="editor-preview">
+        <img class="editor-preview-image" alt="">
+      </div>
+    </article>
+  </template>
+
+  <script src="shared.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>
